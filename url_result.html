@@ -1,0 +1,21 @@
+{{define "result"}}
+<!DOCTYPE html>
+<header>
+
+</header>
+<body>
+    <h1>URL Data Finder</h1>
+
+    <br>
+    <h3>Proccessing: {{.Url}}</h3>
+
+    <br>
+    <ul>
+        <li>Url has login form : {{.HasLoginForm}}</li>
+        <li>No. of working links: {{.WorkingLinks}}</li>
+        <li>No. of non working links: {{.NonWorkingLinks}}</li>
+        <li>No. of internal links: {{.InternalLinks}}</li>
+        <li>No. of external links: {{.ExternalLinks}}</li>
+    </ul>
+</body>
+{{end}}
