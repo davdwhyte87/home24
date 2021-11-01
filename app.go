@@ -49,6 +49,10 @@ func getUrlData(w http.ResponseWriter, r *http.Request) {
 	// var req GetURLDataReq
 	r.ParseForm()
 	url := r.FormValue("url")
+	if url == ""{
+		rnd.HTML(w, http.StatusOK, "home", GetURLDataReq{Url: ""})
+		return
+	}
 	result:= dataProcess(url)
 	result.Url = url
 	
